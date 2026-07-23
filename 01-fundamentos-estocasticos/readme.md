@@ -9,5 +9,5 @@
 
 4. plt.hist(x, bins=40)
 - Monta um histograma (um gráfico de barras que conta frequências) para você visualizar a distribuição dos dados de x.
-- x: São os dados que serão divididos e contados no gráfico.
-- bins=40: Divide a faixa de valores (que vai de mais ou menos $-3$ até $+3$) em 40 intervalos (colunas) verticais.
+    - x: São os dados que serão divididos e contados no gráfico.
+    - bins=40: Divide a faixa de valores (que vai de mais ou menos $-3$ até $+3$) em 40 intervalos (colunas) verticais.
