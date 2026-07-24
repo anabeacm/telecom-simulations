@@ -2,25 +2,15 @@
 
 `x = np.random.randn(1000)`
 
-Gera um vetor `numpy.ndarray` contendo 1000 amostras independentes provenientes de uma Distribuição Normal Padrão, cuja média teórica é 0 e a variância teórica é 1.
+Gera um vetor numpy.ndarray contendo 1000 amostras independentes provenientes de uma Distribuição Normal Padrão, cuja média teórica é 0 e a variância teórica é 1.
 
-Em notação matemática:
+Em notação matemática: \[ x \sim N(0,1) \]
 
-\[
-x \sim N(0,1)
-\]
+`print(x.mean())`: Calcula e exibe a média empírica das 1000 amostras geradas.
 
-`print(x.mean())`
+`print(x.var())`: Calcula e exibe a variância empírica das amostras.
 
-Calcula e exibe a média empírica das 1000 amostras geradas.
-
-`print(x.var())`
-
-Calcula e exibe a variância empírica das amostras.
-
-`plt.hist(x, bins=40)`
-
-Constrói um histograma, permitindo visualizar graficamente como os valores estão distribuídos.
+`plt.hist(x, bins=40)`: Constrói um histograma, permitindo visualizar graficamente como os valores estão distribuídos.
 
 - `x`: Conjunto de dados que será analisado.
 - `bins=40`: Divide automaticamente a faixa de valores presentes em x em 40 intervalos (bins), contabilizando quantas amostras pertencem a cada intervalo.
@@ -33,13 +23,8 @@ Quanto maior o número de amostras, mais o histograma se aproxima da conhecida C
 
 Qualquer perturbação aleatória e indesejada que se soma ao sinal útil durante sua transmissão, processamento ou recepção, degradando a qualidade da informação e dificultando sua recuperação pelo receptor.
 
-Matematicamente:
-
-\[
-x(t)=s(t)+n(t)
-\]
-
-onde:
+Matematicamente: \[ x(t)=s(t)+n(t) \]
+Onde:
 
 - s(t): sinal transmitido (informação útil);
 - n(t): ruído;
@@ -49,30 +34,19 @@ onde:
 
 No modelo de ruído gaussiano, cada amostra do ruído segue uma Distribuição Normal.
 
-Ou seja,
-
-\[
-n \sim N(0,\sigma^2)
-\]
-
-onde:
+Ou seja, \[ n \sim N(0,\sigma^2) \]
+Onde:
 
 - Média = 0;
 - Variância = \(\sigma^2\).
 
 ### Ruído Branco
 
-Um **ruído branco** possui aproximadamente a mesma quantidade de energia (ou, mais precisamente, a mesma densidade espectral de potência) em todas as frequências de interesse.
+Possui aproximadamente a mesma quantidade de energia (ou, mais precisamente, a mesma densidade espectral de potência) em todas as frequências de interesse; Isso significa que nenhuma frequência é privilegiada em relação às demais.
 
-Isso significa que nenhuma frequência é privilegiada em relação às demais.
+### Ruído Colorido
 
----
-
-## Ruído Colorido
-
-Um **ruído colorido** apresenta distribuição de energia diferente ao longo das frequências.
-
-Algumas frequências possuem mais energia do que outras, caracterizando uma preferência espectral.
+Um ruído colorido apresenta distribuição de energia diferente ao longo das frequências; Algumas frequências possuem mais energia do que outras, caracterizando uma preferência espectral.
 
 ---
 
@@ -99,14 +73,7 @@ onde:
 - 1j → Unidade imaginária do Python;
 - √(1/2) → Fator de normalização utilizado para que a potência média do sinal seja igual a 1.
 
-Assim, cada elemento de `s` é um número complexo da forma
-
-\[
-s = x + jy
-\]
-
-representando um ponto no plano complexo.
-
+Assim, cada elemento de s é um número complexo da forma \[ s = x + jy \] representando um ponto no plano complexo.
 
 ## Scatter Plot
 
